@@ -1,37 +1,71 @@
+/* Apply responsive font size and center the content both horizontally and vertically */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Use a clean, sans-serif font */
+    font-size: calc(4px + 1vh + 1vw); /* Responsive font size based on viewport height and width */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margins */
+    background-color: #f0f0f0; /* Light gray background for the whole page */
   }
   
+  /* Container for the question and options */
   .question-container {
     text-align: center;
+    background-color: #fff; /* White background for the question area */
+    padding: 1.25rem; /* Padding inside the container, equivalent to 20px */
+    border-radius: 0.625rem; /* Rounded corners, equivalent to 10px */
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* Subtle shadow for depth, equivalent to 0 4px 8px */
   }
   
+  /* Styling for the options container */
   .options {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 0.625rem; /* Space between options, equivalent to 10px */
+    margin-bottom: 1.25rem; /* Space below the options for the button, equivalent to 20px */
   }
   
+  /* Styling for each option */
   .option {
-    padding: 10px;
-    border: 1px solid #ccc;
-    cursor: pointer;
+    padding: 0.625rem; /* Padding inside each option, equivalent to 10px */
+    border: 0.0625rem solid #ccc; /* Light gray border, equivalent to 1px */
+    border-radius: 0.3125rem; /* Rounded corners for options, equivalent to 5px */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: border 0.3s, background-color 0.3s; /* Smooth transition for border and background */
   }
   
+  /* Styling for the selected option */
   .option.selected {
-    border: 2px solid blue;
+    border: 0.125rem solid blue; /* Blue border for the selected option, equivalent to 2px */
+    background-color: #e0f7fa; /* Light blue background for better visibility */
   }
   
+  /* Styling for the correct option */
   .option.correct {
-    border: 2px solid green;
+    border: 0.125rem solid green; /* Green border for the correct option, equivalent to 2px */
+    background-color: #e8f5e9; /* Light green background */
   }
   
+  /* Styling for the incorrect option */
   .option.incorrect {
-    border: 2px solid red;
+    border: 0.125rem solid red; /* Red border for the incorrect option, equivalent to 2px */
+    background-color: #ffebee; /* Light red background */
+  }
+  
+  /* Styling for the check/continue button */
+  #check-answer {
+    padding: 0.625rem 1.25rem; /* Padding inside the button, equivalent to 10px 20px */
+    font-size: 1em; /* Relative font size for the button text */
+    border: none; /* Remove default border */
+    border-radius: 0.3125rem; /* Rounded corners for the button, equivalent to 5px */
+    background-color: #2196f3; /* Blue background color */
+    color: #fff; /* White text color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+  }
+  
+  #check-answer:hover {
+    background-color: #1976d2; /* Darker blue on hover */
   }
